@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copywriting pour Naturopathes | Monia - Naturopathe & Copywriter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            max-width: 900px;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+        }
+        
+        .hero-cta {
+            background: #48bb78;
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-radius: 50px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+        
+        .hero-cta:hover {
+            background: #38a169;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+        
+        .trust-indicators {
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .problem-section {
+            background: #fff5f5;
+        }
+        
+        .problem-section h2 {
+            color: #e53e3e;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .pain-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #e53e3e;
+        }
+        
+        .pain-card h3 {
+            color: #e53e3e;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .solution-section {
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+        }
+        
+        .solution-section h2 {
+            color: #38a169;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .solution-intro {
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .expertise-section {
+            background: white;
+        }
+        
+        .expertise-section h2 {
+            color: #2d3748;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .expertise-highlight {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .expertise-highlight h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .expertise-highlight p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .services-preview {
+            background: #f7fafc;
+        }
+        
+        .services-preview h2 {
+            color: #2d3748;
+            font-size: 2.2em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .service-card h3 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            background: #48bb78;
+            color: white;
+            padding: 25px 50px;
+            text-decoration: none;
+            font-size: 1.4em;
+            font-weight: bold;
+            border-radius: 50px;
+            margin: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: #38a169;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .footer p {
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .pain-grid,
+            .benefits-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .expertise-highlight {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Animation pour un effet "wow" */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="fade-in">Enfin une copywriter qui comprend vraiment la naturopathie</h1>
+        <p class="subtitle fade-in">Transformez votre expertise en mots qui touchent et convertissent vos futurs clients, sans trahir vos valeurs</p>
+        <a href="mailto:copyandghostwriter@gmail.com?subject=Demande d'appel découverte - Naturopathie" class="hero-cta fade-in">Parlons de votre projet</a>
+        <div class="trust-indicators fade-in">
+            <p>🌿 Naturopathe certifiée | ✍️ Copywriter spécialisée | 💚 100% éthique</p>
+        </div>
+    </div>
+    
+    <!-- Problème -->
+    <div class="section problem-section">
+        <div class="container">
+            <h2>Ces défis vous parlent ?</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>⏰ Manque de temps</h3>
+                    <p>Entre vos consultations et votre formation continue, vous n'avez pas le temps de créer des contenus qui convertissent vraiment.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>😰 Syndrome de la page blanche</h3>
+                    <p>Vous savez ce que vous voulez dire, mais les mots justes ne viennent pas. Résultat : des textes fades qui ne vous ressemblent pas.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>🎯 Messages incompris</h3>
+                    <p>Vos visiteurs ne comprennent pas votre approche holistique et repartent vers des solutions plus "simples" à comprendre.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>💔 Incohérence avec vos valeurs</h3>
+                    <p>Les techniques de marketing classiques vous mettent mal à l'aise. Vous voulez vendre, mais pas à n'importe quel prix.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Solution -->
+    <div class="section solution-section">
+        <div class="container">
+            <h2>La solution ? Une copywriter qui EST naturopathe</h2>
+            <p class="solution-intro">Imaginez des textes qui parlent le langage de vos clients tout en respectant votre déontologie...</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📧</div>
+                    <h3>Mails authentiques</h3>
+                    <p>Des emails qui créent du lien sans jamais harceler vos abonnés</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Pages qui convertissent</h3>
+                    <p>Des pages de vente qui expliquent clairement votre valeur ajoutée</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💎</div>
+                    <h3>Communication cohérente</h3>
+                    <p>Une image professionnelle alignée avec vos valeurs de bienveillance</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Temps libéré</h3>
+                    <p>Plus de temps pour vos consultations et votre vie personnelle</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Expertise -->
+    <div class="section expertise-section">
+        <div class="container">
+            <h2>Pourquoi choisir NaturoWriter ?</h2>
+            <div class="expertise-highlight">
+                <h3>🌿 La seule copywriter naturopathe de France</h3>
+                <p>Je ne devine pas vos besoins... je les VIS au quotidien ! Naturopathe certifiée depuis 2017, je maîtrise votre univers, votre déontologie et surtout : je comprends vos clients.</p>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card" style="border-left-color: #48bb78;">
+                    <h3 style="color: #38a169;">💬 Je parle naturopathie couramment</h3>
+                    <p>Terrain, vitalisme, drainage, micronutrition... Je traduis votre expertise en mots simples et convaincants.</p>
+                </div>
+                <div class="pain-card" style="border-left-color: #48bb78;">
+                    <h3 style="color: #38a169;">🎯 Fini les techniques agressives</h3>
+                    <p>Mes méthodes respectent l'approche bienveillante de la naturopathie tout en étant redoutablement efficaces.</p>
+                </div>
+                <div class="pain-card" style="border-left-color: #48bb78;">
+                    <h3 style="color: #38a169;">✨ Des résultats qui vous ressemblent</h3>
+                    <p>Vos textes attirent enfin la clientèle idéale : celle qui comprend et valorise votre travail.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Services Preview -->
+    <div class="section services-preview">
+        <div class="container">
+            <h2>Mes spécialités pour naturopathes</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>📧 Séquences email</h3>
+                    <p>Mails de bienvenue, nurturing et vente qui convertissent sans agresser</p>
+                </div>
+                <div class="service-card">
+                    <h3>🚀 Pages de vente</h3>
+                    <p>Landing pages optimisées pour vos consultations et programmes</p>
+                </div>
+                <div class="service-card">
+                    <h3>🌐 Contenus web</h3>
+                    <p>Site web complet qui reflète votre expertise et attire vos clients idéaux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA Final -->
+    <div id="contact" class="cta-section">
+        <h2>Prêt(e) à faire décoller votre activité ?</h2>
+        <p>Discutons de vos besoins lors d'un échange gratuit de 30 minutes</p>
+        <a href="mailto:copyandghostwriter@gmail.com?subject=Demande d'appel découverte - Naturopathie" class="cta-button">
+            Je réserve mon appel gratuit
+        </a>
+        <div class="contact-info">
+            <p>📧 Ou écrivez-moi directement : <strong>copyandghostwriter@gmail.com</strong></p>
+            <p style="margin-top: 20px; font-size: 1em; opacity: 0.8;">
+                Réponse garantie sous 24h • Échange sans engagement
+            </p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 - NaturoWriter | Naturopathe & Copywriter spécialisée</p>
+        <p>Accompagner les naturopathes vers plus de visibilité, un mot à la fois 🌿</p>
+    </div>
+</body>
+  </html>
